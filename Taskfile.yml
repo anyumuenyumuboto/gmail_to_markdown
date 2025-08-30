@@ -1,6 +1,6 @@
 # https://taskfile.dev
 
-version: '3'
+version: "3"
 
 tasks:
   build_client:
@@ -20,14 +20,19 @@ tasks:
   check_html:
     desc: format and lint html
     cmds:
-      - npx dprint fmt index.html
-      - npx dprint check index.html
+      - npx dprint fmt index.html Taskfile.yml
+      - npx dprint check index.html Taskfile.yml
   check_ts:
     desc: format and lint typescript
     cmds:
-      - npx @biomejs/biome check --write src/
+      - npx @biomejs/biome check --write src/  dprint.json .clasp.json package.json tsconfig.json vite.config.js
+  check_ts_type:
+    desc: check typescript type
+    cmds:
+      - tsc -p tsconfig.json
   check:
     desc: format and lint
     cmds:
       - task: check_html
       - task: check_ts
+      - task: check_ts_type

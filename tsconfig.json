@@ -1,0 +1,12 @@
+{
+	"compilerOptions": {
+		"esModuleInterop": true,
+		"noEmit": true,
+		"module": "esnext",
+		"rootDir": "./src",
+		"strict": true,
+		"skipLibCheck": true
+	},
+	"include": ["src/**/*"],
+	"exclude": ["dist", "node_modules"]
+}
