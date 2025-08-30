@@ -1,0 +1,5 @@
+dist/
+node_modules/
+publish/index.html
+
+.clasp.json

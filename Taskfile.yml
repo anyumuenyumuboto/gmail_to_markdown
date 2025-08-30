@@ -1,0 +1,33 @@
+# https://taskfile.dev
+
+version: '3'
+
+tasks:
+  build_client:
+    desc: build client side to single file
+    cmds:
+      - npx vite build
+      - cp -ip dist/index.html publish/index.html
+  push_GAS:
+    desc: push GAS
+    cmds:
+      - clasp push
+  push:
+    desc: build and push GAS
+    cmds:
+      - task: build_client
+      - task: push_GAS
+  check_html:
+    desc: format and lint html
+    cmds:
+      - npx dprint fmt index.html
+      - npx dprint check index.html
+  check_ts:
+    desc: format and lint typescript
+    cmds:
+      - npx @biomejs/biome check --write src/
+  check:
+    desc: format and lint
+    cmds:
+      - task: check_html
+      - task: check_ts
