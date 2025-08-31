@@ -1,0 +1,43 @@
+/* style.css */
+
+/* コードブロック全体を相対位置にしておく */
+.qiita-code-block-container {
+	position: relative;
+}
+
+/* コピーボタン (透明 + PicoCSS 風) */
+.copy-button {
+	position: absolute;
+	top: 0.5rem;
+	right: 0.5rem;
+
+	background: transparent;
+	color: var(--pico-primary);
+	border: none;
+	border-radius: var(--pico-border-radius);
+
+	/* PicoCSS 風に少し大きめ */
+	padding: 0.4rem 0.6rem;
+	font-size: 1rem;
+
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	line-height: 1;
+
+	opacity: 0;
+	transition:
+		opacity 0.2s ease-in-out,
+		color 0.2s;
+}
+
+/* ホバー時に色を強調 */
+.copy-button:hover {
+	color: var(--pico-primary-hover, var(--pico-primary));
+}
+
+/* コードブロックにマウスを置いたときだけ表示 */
+.qiita-code-block-container:hover .copy-button {
+	opacity: 1;
+}

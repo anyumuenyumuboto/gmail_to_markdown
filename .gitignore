@@ -1,5 +1,8 @@
-dist/
 node_modules/
+.clasp.json
+
+dist/
 publish/index.html
 
-.clasp.json
+Session.vim
+

@@ -25,7 +25,7 @@ tasks:
   check_ts:
     desc: format and lint typescript
     cmds:
-      - npx @biomejs/biome check --write src/  dprint.json .clasp.json package.json tsconfig.json vite.config.js
+      - npx @biomejs/biome check --write src/  dprint.json .clasp.json package.json tsconfig.json vite.config.js publish/Code.js
   check_ts_type:
     desc: check typescript type
     cmds:
