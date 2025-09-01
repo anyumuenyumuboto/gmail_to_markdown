@@ -1,9 +1,9 @@
 {
 	"name": "gmail_html_to_markdown",
 	"version": "1.0.0",
-	"description": "",
-	"license": "ISC",
-	"author": "",
+	"description": "GAS web app that converts Gmail html emails to markdown notation and copies them to the clipboard",
+	"license": "MIT",
+	"author": "anyumuenyumuboto",
 	"type": "module",
 	"main": "index.js",
 	"scripts": {

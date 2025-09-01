@@ -4,8 +4,6 @@
 
 ## usage
 
-### 導入
-
 ```bash
 # gmail_to_markdownをclone
 git clone git@github.com:anyumuenyumuboto/gmail_to_markdown.git
