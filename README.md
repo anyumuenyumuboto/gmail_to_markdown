@@ -1,5 +1,7 @@
 
-# Gmailのhtmlメールをmarkdown記法に変換して、クリップボードにコピーする、GASのWebアプリ
+# gmail_html_to_markdown
+
+Gmailのhtmlメールをmarkdown記法に変換して、クリップボードにコピーする、GASのWebアプリ
 
 
 ## usage
