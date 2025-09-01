@@ -23,14 +23,8 @@ declare namespace google {
 
 // メイン処理
 const main = (): void => {
-	console.log("App started");
-
 	// 入力フォームを追加
 	createInputForm(document.body);
-
-	// const tamesi = 'console.log("Hello");';
-	// const blockId = "markdown-block";
-	// createMarkdownBlock(tamesi, document.body, blockId);
 };
 
 const createInputForm = (parentElement: HTMLElement): void => {

@@ -12,17 +12,9 @@ function doGet() {}
 
 /* biome-ignore lint/correctness/noUnusedVariables: GASのエントリポイント */
 function doFetchGmail(keyword) {
-	// const keyword = 'example'; // 検索するキーワード
-
-	// var threads = GmailApp.search('in:inbox ' + keyword); // インボックス内でキーワードを含むメールを検索
-	// return "<p>これは<strong>太字</strong>と<em>斜体</em>のテキストです。</p>"
 	return getMailBodyByTitle(keyword);
 }
 
-function _tamesi() {
-	const tamesi = getMailBodyByTitle("tamesi");
-	Logger.log(tamesi);
-}
 function getMailBodyByTitle(title) {
 	// 件名でスレッドを検索
 	var threads = GmailApp.search(`subject:"${title}"`);
