@@ -36,3 +36,11 @@ tasks:
       - task: check_html
       - task: check_ts
       - task: check_ts_type
+  deploy:
+    desc: deploy web app
+    cmds:
+      - clasp deploy
+  open:
+    desc: open web app
+    cmds:
+      - clasp open-web-app

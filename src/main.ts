@@ -28,7 +28,7 @@ const main = (): void => {
 };
 
 const createInputForm = (parentElement: HTMLElement): void => {
-	const form = $("<form>").appendTo(parentElement);
+	const form = $("<form>").attr("autocomplete", "on").appendTo(parentElement);
 
 	// 入力フィールド
 	const input = $("<input>")
