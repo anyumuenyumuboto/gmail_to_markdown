@@ -5,11 +5,9 @@ import "@picocss/pico";
 
 import ClipboardJS from "clipboard";
 import $ from "jquery";
-import TurndownService from "turndown";
+import { createMarkdownFromHtml } from "./markdown";
 
-new ClipboardJS(".btn");
-
-// GAS 型定義（前回と同じ）
+// GAS 型定義
 declare namespace google {
 	namespace script {
 		interface Run {
@@ -23,6 +21,8 @@ declare namespace google {
 
 // メイン処理
 const main = (): void => {
+	new ClipboardJS(".btn");
+
 	// 入力フォームを追加
 	createInputForm(document.body);
 };
@@ -65,16 +65,6 @@ const createInputForm = (parentElement: HTMLElement): void => {
 			})
 			.doFetchGmail(query);
 	});
-};
-
-// Markdown 変換関数
-const createMarkdownFromHtml = (html: string): string => {
-	const turndownService = new TurndownService({
-		headingStyle: "atx",
-		codeBlockStyle: "fenced",
-		emDelimiter: "*",
-	});
-	return turndownService.turndown(html);
 };
 
 const createMarkdownBlock = (
