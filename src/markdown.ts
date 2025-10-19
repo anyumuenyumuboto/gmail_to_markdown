@@ -13,6 +13,6 @@ export const createMarkdownFromHtml = (html: string): string => {
 		codeBlockStyle: "fenced",
 		emDelimiter: "*",
 	});
-	turndownService.remove(["style", "script"]);
+	turndownService.remove(["title", "style", "script"]);
 	return turndownService.turndown(html);
 };
