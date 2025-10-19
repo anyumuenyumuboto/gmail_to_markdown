@@ -4,8 +4,10 @@ function doGet() {}
 (() => {
 	// src/main.ts
 	function doGet() {
-		// return HtmlService.createHtmlOutput(`<h1>Success! (v2)</h1>`);
-		return HtmlService.createTemplateFromFile("index").evaluate();
+		// 参考 [GAS×HTMLでレスポンシブが効かない？doGetのmetaタグ追加で一発解決！｜ケンジ](https://note.com/kenji_webapps/n/nbc13f0f7f36e)
+		return HtmlService.createTemplateFromFile("index")
+			.evaluate()
+			.addMetaTag("viewport", "width=device-width, initial-scale=1");
 	}
 	this.doGet = doGet;
 })();

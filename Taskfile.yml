@@ -30,9 +30,21 @@ tasks:
     desc: check typescript type
     cmds:
       - tsc -p tsconfig.json
+  test:
+    desc: test
+    cmds:
+      - npx vitest
   check:
     desc: format and lint
     cmds:
       - task: check_html
       - task: check_ts
       - task: check_ts_type
+  deploy:
+    desc: deploy web app
+    cmds:
+      - clasp deploy
+  open:
+    desc: open web app
+    cmds:
+      - clasp open-web-app
